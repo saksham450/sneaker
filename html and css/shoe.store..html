@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup & Login Pages</title>
+    <style>
+      /* CSS styles go here */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 300px;
+        padding: 20px;
+        background-color: #e9e9e9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 10px;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: bold;
+        color: #555;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+
+      .form-group input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .form-group input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .signup-link {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .signup-link a {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      function showSignup() {
+        document.getElementById("login-container").style.display = "none";
+        document.getElementById("signup-container").style.display = "block";
+      }
+
+      function showLogin() {
+        document.getElementById("signup-container").style.display = "none";
+        document.getElementById("login-container").style.display = "block";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container" id="login-container">
+      <h2>Login</h2>
+      <form
+        id="login-form"
+        action="file:///C:/Users/Asus/OneDrive/Desktop/html%20and%20css/website.html"
+        method="post"
+      >
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Login" />
+        </div>
+      </form>
+      <div class="signup-link">
+        <p>
+          Don't have an account? <a href="#" onclick="showSignup()">Signup</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container" id="signup-container" style="display: none">
+      <h2>Signup</h2>
+      <form
+        id="signup-form"
+        action="file:///C:/Users/DELL/Desktop/website/senakerstore.com.html"
+        method="post"
+      >
+        <div class="form-group">
+          <label for="new-username">Username:</label>
+          <input type="text" id="new-username" name="new-username" required />
+        </div>
+        <div class="form-group">
+          <label for="new-password">Password:</label>
+          <input
+            type="password"
+            id="new-password"
+            name="new-password"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Signup" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
